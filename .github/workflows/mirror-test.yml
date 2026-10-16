@@ -1,5 +1,13 @@
 # Mirrors branch `test` to JernbomLethin/snoozemore-website-test (main),
 # which GitHub Pages serves as test.snoozemore.se (BESLUT 0024).
+#
+# `test` is a plain copy of the site (normally identical to `main`). The
+# test-site specifics are applied here, at mirror time, so nothing on `test`
+# needs to differ from `main`:
+#   - every .html gets <meta name="robots" content="noindex, nofollow">
+#   - CNAME becomes test.snoozemore.se
+#   - robots.txt disallows everything
+#   - sitemap.xml is dropped
 # Writes go through the deploy key in TEST_DEPLOY_KEY, not GITHUB_TOKEN.
 name: Mirror test branch
 
@@ -24,8 +32,50 @@ jobs:
         uses: actions/checkout@v5
         with:
           ref: test
-          fetch-depth: 0
+          fetch-depth: 1
           persist-credentials: false
+
+      - name: Apply test-site settings
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import pathlib, re, sys
+          tag = '<meta name="robots" content="noindex, nofollow">'
+          robots_re = re.compile(r'<meta\s+name="robots"[^>]*>', re.I)
+          charset_re = re.compile(r'(<meta\s+charset=[^>]*>)', re.I)
+          for p in sorted(pathlib.Path('.').rglob('*.html')):
+              if '.git' in p.parts:
+                  continue
+              s = p.read_text(encoding='utf-8')
+              if robots_re.search(s):
+                  s = robots_re.sub(tag, s, count=1)
+              elif charset_re.search(s):
+                  s = charset_re.sub(r'\1\n  ' + tag, s, count=1)
+              else:
+                  sys.exit(f'{p}: no <meta charset> to insert noindex after')
+              p.write_text(s, encoding='utf-8')
+              print(f'noindex: {p}')
+          pathlib.Path('CNAME').write_text('test.snoozemore.se\n', encoding='utf-8')
+          pathlib.Path('robots.txt').write_text('User-agent: *\nDisallow: /\n', encoding='utf-8')
+          sm = pathlib.Path('sitemap.xml')
+          if sm.exists():
+              sm.unlink()
+          PY
+          # Every html file must now carry the tag exactly once.
+          for f in $(find . -name '*.html' -not -path './.git/*'); do
+            n=$(grep -c 'name="robots"' "$f")
+            [ "$n" = 1 ] || { echo "$f: expected 1 robots tag, found $n"; exit 1; }
+          done
+          test "$(cat CNAME)" = "test.snoozemore.se"
+          test ! -e sitemap.xml
+
+      - name: Commit mirror snapshot
+        run: |
+          set -euo pipefail
+          git config user.name "snoozemore-website mirror"
+          git config user.email "noreply@github.com"
+          git add -A
+          git commit -q -m "Mirror of snoozemore-website@test (${GITHUB_SHA}) with test-site settings"
 
       - name: Push to snoozemore-website-test main
         env:
@@ -39,7 +89,6 @@ jobs:
           # SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU).
           echo 'github.com ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOMqqnkVzrm0SdG6UOoqKLsabgH5C9okWi0dh2l9GKJl' > ~/.ssh/known_hosts
           export GIT_SSH_COMMAND='ssh -i ~/.ssh/mirror_key -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes -o UserKnownHostsFile=~/.ssh/known_hosts'
-          git status --porcelain | grep -q . && { echo "Working tree not clean"; exit 1; }
           git push --force git@github.com:JernbomLethin/snoozemore-website-test.git HEAD:refs/heads/main
 
       - name: Remove key
