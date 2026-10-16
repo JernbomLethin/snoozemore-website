@@ -1,0 +1,47 @@
+# Mirrors branch `test` to JernbomLethin/snoozemore-website-test (main),
+# which GitHub Pages serves as test.snoozemore.se (BESLUT 0024).
+# Writes go through the deploy key in TEST_DEPLOY_KEY, not GITHUB_TOKEN.
+name: Mirror test branch
+
+on:
+  push:
+    branches: [test]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: mirror-test
+  cancel-in-progress: false
+
+jobs:
+  mirror:
+    if: github.ref == 'refs/heads/test'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out branch test
+        uses: actions/checkout@v4
+        with:
+          ref: test
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Push to snoozemore-website-test main
+        env:
+          DEPLOY_KEY: ${{ secrets.TEST_DEPLOY_KEY }}
+        run: |
+          set -euo pipefail
+          install -d -m 700 ~/.ssh
+          install -m 600 /dev/null ~/.ssh/mirror_key
+          printf '%s\n' "$DEPLOY_KEY" > ~/.ssh/mirror_key
+          # GitHub's published ed25519 host key (api.github.com/meta,
+          # SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU).
+          echo 'github.com ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOMqqnkVzrm0SdG6UOoqKLsabgH5C9okWi0dh2l9GKJl' > ~/.ssh/known_hosts
+          export GIT_SSH_COMMAND='ssh -i ~/.ssh/mirror_key -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes -o UserKnownHostsFile=~/.ssh/known_hosts'
+          git status --porcelain | grep -q . && { echo "Working tree not clean"; exit 1; }
+          git push --force git@github.com:JernbomLethin/snoozemore-website-test.git HEAD:refs/heads/main
+
+      - name: Remove key
+        if: always()
+        run: rm -f ~/.ssh/mirror_key
