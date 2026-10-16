@@ -1,0 +1,8 @@
+_backup_2026-09-21/
+_backup_live_2026-09-24/
+.claude/
+.env.deploy
+deploy/
+deploy.py
+deploy.tar
+__pycache__/

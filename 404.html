@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page not found, Snoozemore Hostel Gothenburg</title>
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap">
+  <style>
+    :root {
+      --navy:       #1d2d3a;
+      --teal:       #4a8c80;
+      --teal-light: #5fa899;
+      --off-white:  #f7f4ef;
+      --white:      #ffffff;
+      --text-muted: #6b7280;
+      --font:       'Outfit', system-ui, -apple-system, sans-serif;
+      --radius:     8px;
+      --transition: 0.2s ease;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: var(--font); background: var(--navy); color: var(--white);
+      min-height: 100vh; display: flex; align-items: center; justify-content: center;
+      padding: 40px 20px; text-align: center; line-height: 1.6;
+    }
+    .wrap { max-width: 560px; }
+    .logo { font-weight: 700; font-size: 1.4rem; letter-spacing: -0.01em; margin-bottom: 40px; display: inline-block; color: var(--white); text-decoration: none; }
+    .logo span { color: var(--teal-light); }
+    .code { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal-light); margin-bottom: 14px; }
+    h1 { font-size: clamp(1.6rem, 5vw, 2.3rem); line-height: 1.2; margin-bottom: 16px; }
+    p { color: rgba(255,255,255,0.75); margin-bottom: 32px; }
+    .actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    a.btn {
+      display: inline-flex; align-items: center; gap: 8px; padding: 13px 24px;
+      border-radius: var(--radius); font-weight: 600; font-size: 0.9rem; text-decoration: none;
+      transition: background var(--transition), border-color var(--transition);
+    }
+    .btn-primary { background: var(--teal); color: var(--white); }
+    .btn-primary:hover { background: var(--teal-light); }
+    .btn-outline { border: 1px solid rgba(255,255,255,0.3); color: rgba(255,255,255,0.85); }
+    .btn-outline:hover { border-color: var(--white); color: var(--white); }
+    .sv { margin-top: 36px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.12); font-size: 0.9rem; color: rgba(255,255,255,0.6); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <a href="/" class="logo">Snooze<span>more</span></a>
+    <div class="code">404</div>
+    <h1>This page has checked out.</h1>
+    <p>The page you were looking for doesn't exist here. Our rooms, however, are still very much available.</p>
+    <div class="actions">
+      <a href="https://snoozemore.nitesoft.se/" class="btn btn-primary" target="_blank" rel="noopener">Book your stay →</a>
+      <a href="/" class="btn btn-outline">Go to the start page</a>
+    </div>
+    <p class="sv">Sidan du letade efter finns inte. Gå till <a href="/" style="color:var(--teal-light);">startsidan</a> eller <a href="https://snoozemore.nitesoft.se/" target="_blank" rel="noopener" style="color:var(--teal-light);">boka ditt rum</a>.</p>
+  </div>
+</body>
+</html>

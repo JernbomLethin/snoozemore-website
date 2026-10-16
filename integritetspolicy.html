@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Integritetspolicy, Snoozemore Hostel</title>
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="description" content="Så behandlar Snoozemore Hostel i Göteborg personuppgifter från chatten och företagsformuläret.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap">
+  <style>
+    :root {
+      --navy:       #1d2d3a;
+      --teal:       #4a8c80;
+      --teal-light: #5fa899;
+      --off-white:  #f7f4ef;
+      --white:      #ffffff;
+      --text:       #1a1a1a;
+      --text-muted: #6b7280;
+      --font:       'Outfit', system-ui, -apple-system, sans-serif;
+      --radius:     8px;
+      --max-w:      780px;
+      --transition: 0.2s ease;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: var(--font); background: var(--off-white); color: var(--text); line-height: 1.65; }
+    a { color: var(--teal); }
+
+    nav { background: var(--navy); }
+    .nav-inner {
+      max-width: var(--max-w); margin: 0 auto; padding: 0 20px; height: 64px;
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    }
+    .nav-logo { font-weight: 700; font-size: 1.15rem; color: var(--white); text-decoration: none; letter-spacing: -0.01em; }
+    .nav-logo span { color: var(--teal-light); }
+    .nav-right { display: flex; align-items: center; gap: 12px; }
+    .nav-back { color: rgba(255,255,255,0.75); font-size: 0.875rem; text-decoration: none; }
+    .nav-back:hover { color: var(--white); }
+    .lang-toggle { display: flex; gap: 4px; background: rgba(255,255,255,0.1); border-radius: 20px; padding: 4px; }
+    .lang-btn {
+      padding: 4px 10px; border-radius: 16px; color: rgba(255,255,255,0.7);
+      font-weight: 500; font-size: 0.8rem; background: none; border: 0; cursor: pointer; font-family: inherit;
+    }
+    .lang-btn.active { background: var(--white); color: var(--navy); font-weight: 600; }
+
+    main { max-width: var(--max-w); margin: 0 auto; padding: 48px 20px 72px; }
+    h1 { font-size: clamp(1.7rem, 4.5vw, 2.3rem); line-height: 1.2; color: var(--navy); margin-bottom: 8px; }
+    .updated { color: var(--text-muted); font-size: 0.875rem; margin-bottom: 32px; }
+    h2 { font-size: 1.15rem; color: var(--navy); margin: 36px 0 10px; }
+    p { margin-bottom: 14px; }
+    ul { margin: 0 0 16px 20px; }
+    li { margin-bottom: 6px; }
+    .card { background: var(--white); border-radius: var(--radius); padding: 20px 22px; margin-bottom: 16px; }
+    .card h3 { font-size: 1rem; color: var(--navy); margin-bottom: 8px; }
+    .card p:last-child, .card ul:last-child { margin-bottom: 0; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 16px; font-size: 0.925rem; background: var(--white); border-radius: var(--radius); overflow: hidden; }
+    th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid rgba(0,0,0,0.07); vertical-align: top; }
+    th { background: rgba(29,45,58,0.05); font-weight: 600; color: var(--navy); }
+    tr:last-child td { border-bottom: 0; }
+    .table-wrap { overflow-x: auto; }
+
+    footer { background: var(--navy); color: rgba(255,255,255,0.6); font-size: 0.85rem; }
+    .footer-inner { max-width: var(--max-w); margin: 0 auto; padding: 24px 20px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; }
+    footer a { color: rgba(255,255,255,0.8); }
+    @media (max-width: 560px) { .nav-back { display: none; } }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Snooze<span>more</span></a>
+      <div class="nav-right">
+        <a href="index.html" class="nav-back" data-en="← Back to the start page" data-sv="← Till startsidan">← Till startsidan</a>
+        <div class="lang-toggle">
+          <button class="lang-btn" id="lang-en" onclick="setLang('en')">EN</button>
+          <button class="lang-btn active" id="lang-sv" onclick="setLang('sv')">SV</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <h1 data-en="Privacy policy" data-sv="Integritetspolicy">Integritetspolicy</h1>
+    <p class="updated" data-en="Last updated 24 September 2026" data-sv="Senast uppdaterad 24 september 2026">Senast uppdaterad 24 september 2026</p>
+
+    <p data-en="This page explains what personal data we handle when you use snoozemore.se, why we do it and for how long we keep it." data-sv="Den här sidan beskriver vilka personuppgifter vi hanterar när du använder snoozemore.se, varför vi gör det och hur länge vi sparar dem.">Den här sidan beskriver vilka personuppgifter vi hanterar när du använder snoozemore.se, varför vi gör det och hur länge vi sparar dem.</p>
+
+    <h2 data-en="Who is responsible" data-sv="Vem ansvarar">Vem ansvarar</h2>
+    <p data-en="Pottebo AB, company registration number 559118-0145, operates Snoozemore Hostel and is the controller of the personal data described here." data-sv="Pottebo AB, organisationsnummer 559118-0145, driver Snoozemore Hostel och är personuppgiftsansvarig för behandlingen som beskrivs här.">Pottebo AB, organisationsnummer 559118-0145, driver Snoozemore Hostel och är personuppgiftsansvarig för behandlingen som beskrivs här.</p>
+    <p>Kvilletorget 24, 417 03 Göteborg<br>
+       <a href="mailto:info@snoozemore.se">info@snoozemore.se</a><br>
+       <a href="tel:+46317990910">031-799 09 10</a></p>
+
+    <h2 data-en="What we handle, and why" data-sv="Vad vi hanterar, och varför">Vad vi hanterar, och varför</h2>
+
+    <div class="card">
+      <h3 data-en="The chat" data-sv="Chatten">Chatten</h3>
+      <p data-en="When you write to our chat bot we receive your message, a randomly generated conversation ID, the time and the language. Our server also sees your IP address. We use this to answer your questions about the hostel and to see where the bot answers badly, so that we can improve it. The legal basis is our legitimate interest in giving guests answers around the clock." data-sv="När du skriver till vår chattbot tar vi emot ditt meddelande, ett slumpat samtals-id, tidpunkt och språk. Vår server ser också din IP-adress. Vi använder det för att svara på dina frågor om vandrarhemmet och för att se var boten svarar dåligt, så att vi kan förbättra den. Den rättsliga grunden är vårt berättigade intresse av att ge gäster svar dygnet runt.">När du skriver till vår chattbot tar vi emot ditt meddelande, ett slumpat samtals-id, tidpunkt och språk. Vår server ser också din IP-adress. Vi använder det för att svara på dina frågor om vandrarhemmet och för att se var boten svarar dåligt, så att vi kan förbättra den. Den rättsliga grunden är vårt berättigade intresse av att ge gäster svar dygnet runt.</p>
+      <p data-en="Your browser also keeps the conversation locally so that it is still there if you change page. That is not a cookie, it is stored only in your own browser, and it disappears when you start a new chat or clear your browser data." data-sv="Din webbläsare sparar också samtalet lokalt så att det finns kvar om du byter sida. Det är inte en kaka, det lagras bara i din egen webbläsare, och det försvinner när du startar en ny chatt eller rensar webbläsardata.">Din webbläsare sparar också samtalet lokalt så att det finns kvar om du byter sida. Det är inte en kaka, det lagras bara i din egen webbläsare, och det försvinner när du startar en ny chatt eller rensar webbläsardata.</p>
+      <p data-en="Please do not send card numbers, personal identity numbers or other sensitive information in the chat." data-sv="Skicka inte kortnummer, personnummer eller andra känsliga uppgifter i chatten.">Skicka inte kortnummer, personnummer eller andra känsliga uppgifter i chatten.</p>
+    </div>
+
+    <div class="card">
+      <h3 data-en="The corporate enquiry form" data-sv="Företagsformuläret">Företagsformuläret</h3>
+      <p data-en="When you send an enquiry we receive your name, company, email address, any phone number, the number of guests, the length of the stay and your message. It reaches us as an email to info@snoozemore.se, and we use it to answer you and to plan the stay. The legal basis is our legitimate interest in handling enquiries and, where a booking follows, steps taken before entering into an agreement." data-sv="När du skickar en förfrågan tar vi emot ditt namn, företag, e-postadress, eventuellt telefonnummer, antal gäster, vistelsens längd och ditt meddelande. Det kommer till oss som ett mejl till info@snoozemore.se, och vi använder det för att svara dig och planera boendet. Den rättsliga grunden är vårt berättigade intresse av att hantera förfrågningar och, om en bokning följer, åtgärder inför ett avtal.">När du skickar en förfrågan tar vi emot ditt namn, företag, e-postadress, eventuellt telefonnummer, antal gäster, vistelsens längd och ditt meddelande. Det kommer till oss som ett mejl till info@snoozemore.se, och vi använder det för att svara dig och planera boendet. Den rättsliga grunden är vårt berättigade intresse av att hantera förfrågningar och, om en bokning följer, åtgärder inför ett avtal.</p>
+      <p data-en="In our own logs we save only the company name, the time and which page the enquiry came from. Your name, email, phone number and message are kept only in the email." data-sv="I våra egna loggar sparar vi bara företagsnamnet, tidpunkten och vilken sida förfrågan kom från. Ditt namn, din e-post, ditt telefonnummer och ditt meddelande finns bara i mejlet.">I våra egna loggar sparar vi bara företagsnamnet, tidpunkten och vilken sida förfrågan kom från. Ditt namn, din e-post, ditt telefonnummer och ditt meddelande finns bara i mejlet.</p>
+    </div>
+
+    <div class="card">
+      <h3 data-en="If you have been locked out" data-sv="Om du blivit utelåst">Om du blivit utelåst</h3>
+      <p data-en="If you use the chat to get help with a door code, we pass your name and booking number to our booking system, Nitesoft, to check the booking. What you write in that part of the chat is not saved in our logs, and neither are door codes." data-sv="Om du använder chatten för att få hjälp med en dörrkod skickar vi ditt namn och bokningsnummer till vårt bokningssystem Nitesoft för att kontrollera bokningen. Det du skriver i den delen av chatten sparas inte i våra loggar, och inte heller dörrkoder.">Om du använder chatten för att få hjälp med en dörrkod skickar vi ditt namn och bokningsnummer till vårt bokningssystem Nitesoft för att kontrollera bokningen. Det du skriver i den delen av chatten sparas inte i våra loggar, och inte heller dörrkoder.</p>
+    </div>
+
+    <h2 data-en="How long we keep it" data-sv="Hur länge vi sparar">Hur länge vi sparar</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th data-en="Data" data-sv="Uppgift">Uppgift</th>
+            <th data-en="Kept for" data-sv="Sparas">Sparas</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-en="Chat conversations (message and reply)" data-sv="Chattsamtal (fråga och svar)">Chattsamtal (fråga och svar)</td>
+            <td data-en="90 days" data-sv="90 dagar">90 dagar</td>
+          </tr>
+          <tr>
+            <td data-en="Our notes on how the bot could answer better" data-sv="Våra anteckningar om hur boten kan svara bättre">Våra anteckningar om hur boten kan svara bättre</td>
+            <td data-en="90 days" data-sv="90 dagar">90 dagar</td>
+          </tr>
+          <tr>
+            <td data-en="Server logs with IP address" data-sv="Serverloggar med IP-adress">Serverloggar med IP-adress</td>
+            <td data-en="30 days" data-sv="30 dagar">30 dagar</td>
+          </tr>
+          <tr>
+            <td data-en="Web server logs (IP address, browser)" data-sv="Webbserverloggar (IP-adress, webbläsare)">Webbserverloggar (IP-adress, webbläsare)</td>
+            <td data-en="About 15 days" data-sv="Cirka 15 dagar">Cirka 15 dagar</td>
+          </tr>
+          <tr>
+            <td data-en="Lock-out attempts" data-sv="Utelåsningsförsök">Utelåsningsförsök</td>
+            <td data-en="30 days" data-sv="30 dagar">30 dagar</td>
+          </tr>
+          <tr>
+            <td data-en="Corporate enquiries" data-sv="Företagsförfrågningar">Företagsförfrågningar</td>
+            <td data-en="As email, for as long as the business relationship calls for it" data-sv="Som mejl, så länge affärsrelationen kräver det">Som mejl, så länge affärsrelationen kräver det</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p data-en="Deletion of chat conversations and notes happens automatically every night." data-sv="Raderingen av chattsamtal och anteckningar sker automatiskt varje natt.">Raderingen av chattsamtal och anteckningar sker automatiskt varje natt.</p>
+
+    <h2 data-en="Who else sees the information" data-sv="Vilka andra ser uppgifterna">Vilka andra ser uppgifterna</h2>
+    <ul>
+      <li data-en="<strong>Anthropic</strong> generates the chat bot's answers, and receives the conversation for that purpose. Processed in the USA." data-sv="<strong>Anthropic</strong> skapar chattbotens svar och tar emot samtalet för det ändamålet. Behandlas i USA."><strong>Anthropic</strong> skapar chattbotens svar och tar emot samtalet för det ändamålet. Behandlas i USA.</li>
+      <li data-en="<strong>Microsoft</strong> hosts the chat server (Azure, Sweden) and our email (Microsoft 365)." data-sv="<strong>Microsoft</strong> är värd för chattservern (Azure, Sverige) och vår e-post (Microsoft 365)."><strong>Microsoft</strong> är värd för chattservern (Azure, Sverige) och vår e-post (Microsoft 365).</li>
+      <li data-en="<strong>Nitesoft</strong> is our booking system, and receives booking details when a booking is checked." data-sv="<strong>Nitesoft</strong> är vårt bokningssystem och tar emot bokningsuppgifter när en bokning kontrolleras."><strong>Nitesoft</strong> är vårt bokningssystem och tar emot bokningsuppgifter när en bokning kontrolleras.</li>
+      <li data-en="<strong>one.com</strong> hosts this website." data-sv="<strong>one.com</strong> är webbhotell för den här webbplatsen."><strong>one.com</strong> är webbhotell för den här webbplatsen.</li>
+      <li data-en="<strong>Google</strong> receives your IP address when the map and the fonts on our pages load. Processed in the USA." data-sv="<strong>Google</strong> tar emot din IP-adress när kartan och typsnitten på våra sidor laddas. Behandlas i USA."><strong>Google</strong> tar emot din IP-adress när kartan och typsnitten på våra sidor laddas. Behandlas i USA.</li>
+      <li data-en="<strong>Meta</strong> handles the conversation if you contact us through WhatsApp." data-sv="<strong>Meta</strong> hanterar samtalet om du kontaktar oss via WhatsApp."><strong>Meta</strong> hanterar samtalet om du kontaktar oss via WhatsApp.</li>
+    </ul>
+    <p data-en="For transfers outside the EU and EEA we rely on the European Commission's standard contractual clauses. We do not sell your data and we do not use it for advertising." data-sv="För överföringar utanför EU och EES stödjer vi oss på EU-kommissionens standardavtalsklausuler. Vi säljer inte dina uppgifter och använder dem inte för annonsering.">För överföringar utanför EU och EES stödjer vi oss på EU-kommissionens standardavtalsklausuler. Vi säljer inte dina uppgifter och använder dem inte för annonsering.</p>
+
+    <h2 data-en="Cookies" data-sv="Kakor">Kakor</h2>
+    <p data-en="This website sets no cookies and uses no visitor tracking. The chat saves your conversation in your own browser, as described above, so that it is not lost when you change page." data-sv="Den här webbplatsen sätter inga kakor och använder ingen besöksmätning. Chatten sparar ditt samtal i din egen webbläsare, enligt beskrivningen ovan, så att det inte försvinner när du byter sida.">Den här webbplatsen sätter inga kakor och använder ingen besöksmätning. Chatten sparar ditt samtal i din egen webbläsare, enligt beskrivningen ovan, så att det inte försvinner när du byter sida.</p>
+
+    <h2 data-en="Your rights" data-sv="Dina rättigheter">Dina rättigheter</h2>
+    <p data-en="You have the right to know what we hold about you, to have it corrected or deleted, and to object to our handling of it. Write to info@snoozemore.se and we will help you. If a chat conversation is to be deleted, it helps if you can tell us roughly when it took place and what it was about, since conversations are not connected to any name." data-sv="Du har rätt att få veta vad vi har om dig, att få det rättat eller raderat, och att invända mot vår hantering. Skriv till info@snoozemore.se så hjälper vi dig. Om ett chattsamtal ska raderas underlättar det om du kan säga ungefär när det ägde rum och vad det handlade om, eftersom samtal inte är kopplade till något namn.">Du har rätt att få veta vad vi har om dig, att få det rättat eller raderat, och att invända mot vår hantering. Skriv till info@snoozemore.se så hjälper vi dig. Om ett chattsamtal ska raderas underlättar det om du kan säga ungefär när det ägde rum och vad det handlade om, eftersom samtal inte är kopplade till något namn.</p>
+    <p data-en="If you are not happy with how we handle your data you can complain to the Swedish Authority for Privacy Protection, IMY, at imy.se." data-sv="Om du inte är nöjd med hur vi hanterar dina uppgifter kan du klaga hos Integritetsskyddsmyndigheten, IMY, på imy.se.">Om du inte är nöjd med hur vi hanterar dina uppgifter kan du klaga hos Integritetsskyddsmyndigheten, IMY, på imy.se.</p>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span>© 2026 Pottebo AB · Kvilletorget 24, Göteborg</span>
+      <a href="index.html" data-en="Start page" data-sv="Startsidan">Startsidan</a>
+    </div>
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-en]').forEach(el => {
+        const text = el.getAttribute('data-' + lang);
+        if (text) el.innerHTML = text;
+      });
+      document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+      document.getElementById('lang-sv').classList.toggle('active', lang === 'sv');
+      try { localStorage.setItem('lang', lang); } catch (e) {}
+    }
+    (function() {
+      let saved = null; try { saved = localStorage.getItem('lang'); } catch (e) {}
+      const browser = navigator.language || '';
+      const preferred = saved || (browser.startsWith('sv') ? 'sv' : 'en');
+      if (preferred === 'en') setLang('en');
+    })();
+  </script>
+</body>
+</html>

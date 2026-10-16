@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO — corporate page targets different keywords than the main site -->
+  <title>Corporate Accommodation Gothenburg, Snoozemore Hostel</title>
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="description" content="Affordable, quiet and clean accommodation for project workers, consultants and corporate teams in Gothenburg. Group rates available. Rated 8.5 on Booking.com.">
+  <meta name="keywords" content="corporate accommodation gothenburg, project worker accommodation, company stay gothenburg, team accommodation gothenburg, consultant accommodation göteborg, företagsboende göteborg">
+  <link rel="canonical" href="https://www.snoozemore.se/corporate.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.snoozemore.se/corporate.html">
+  <meta property="og:title" content="Corporate Accommodation in Gothenburg, Snoozemore">
+  <meta property="og:description" content="Clean, quiet and affordable stays for project workers and corporate teams in Gothenburg. Group bookings welcome.">
+
+  <!-- Schema.org — targets "LodgingBusiness" with corporate focus -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Hostel",
+    "name": "Snoozemore Hostel, Corporate Accommodation",
+    "url": "https://www.snoozemore.se/corporate.html",
+    "description": "Snoozemore offers affordable, quiet and clean accommodation for project workers, consultants and corporate teams visiting Gothenburg. Invoicing available. Group rates on request.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Kvilletorget 24",
+      "addressLocality": "Göteborg",
+      "postalCode": "417 03",
+      "addressCountry": "SE"
+    },
+    "telephone": "+46317990910",
+    "email": "info@snoozemore.se",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "8.5",
+      "bestRating": "10"
+    }
+  }
+  </script>
+
+  <!-- FAQ Schema for AI search -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can companies get an invoice for stays at Snoozemore?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Snoozemore can issue invoices for corporate stays. Contact info@snoozemore.se with your company details and booking reference."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Snoozemore offer group rates for corporate bookings?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Group rates and long-stay arrangements are available for corporate clients. Contact us directly to discuss your team's needs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Snoozemore suitable for project workers staying in Gothenburg?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Snoozemore regularly hosts project workers, consultants and corporate teams. The hostel is quiet, clean and practical, with self check-in, free WiFi, and all linens included."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --navy:       #1a2744;
+      --navy-light: #253565;
+      --teal:       #2a7a6f;
+      --teal-light: #3a9e90;
+      --off-white:  #f8f7f4;
+      --warm-gray:  #e8e5e0;
+      --text:       #1a1a1a;
+      --text-muted: #6b7280;
+      --white:      #ffffff;
+      --font:       'Inter', system-ui, -apple-system, sans-serif;
+      --radius:     8px;
+      --max-w:      1100px;
+      --transition: 0.2s ease;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); color: var(--text); background: var(--white); line-height: 1.6; }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    button { cursor: pointer; border: none; background: none; font-family: inherit; }
+
+    h1 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 700; line-height: 1.1; letter-spacing: -0.02em; }
+    h2 { font-size: clamp(1.6rem, 3.5vw, 2.2rem); font-weight: 700; line-height: 1.2; letter-spacing: -0.01em; }
+    h3 { font-size: 1.1rem; font-weight: 600; }
+    p  { color: var(--text-muted); }
+
+    .container { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
+    .section    { padding: 88px 0; }
+    .section--alt  { background: var(--off-white); }
+    .section--dark { background: var(--navy); color: var(--white); }
+    .section--dark p { color: rgba(255,255,255,0.7); }
+    .section-label {
+      font-size: 0.78rem; font-weight: 600; color: var(--teal);
+      text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(26, 39, 68, 0.96);
+      backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+      padding: 0 24px;
+    }
+    .nav-inner {
+      max-width: var(--max-w); margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px;
+    }
+    .nav-logo { font-weight: 700; font-size: 1.2rem; color: var(--white); letter-spacing: -0.01em; }
+    .nav-logo span { color: var(--teal-light); }
+    .nav-back {
+      display: inline-flex; align-items: center; gap: 8px;
+      color: rgba(255,255,255,0.7); font-size: 0.875rem; font-weight: 500;
+      transition: color var(--transition);
+    }
+    .nav-back:hover { color: var(--white); }
+    .lang-toggle { display: flex; align-items: center; gap: 4px; background: rgba(255,255,255,0.1); border-radius: 20px; padding: 4px; }
+    .lang-btn { padding: 4px 10px; border-radius: 16px; color: rgba(255,255,255,0.7); font-weight: 500; font-size: 0.8rem; background: none; border: 0; cursor: pointer; font-family: inherit; }
+    .lang-btn.active { background: var(--white); color: var(--navy); font-weight: 600; }
+    @media (max-width: 640px) { .nav-back { display: none; } .nav-right { gap: 10px; } .nav-right .btn-primary { padding: 8px 14px; font-size: 0.8rem; white-space: nowrap; } }
+    .nav-right { display: flex; align-items: center; gap: 16px; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--teal); color: var(--white);
+      padding: 10px 22px; border-radius: var(--radius);
+      font-weight: 700; font-size: 0.9rem;
+      transition: background var(--transition), transform var(--transition);
+    }
+    .btn-primary:hover { background: var(--teal-light); transform: translateY(-1px); }
+    .btn-outline-sm {
+      border: 1.5px solid rgba(255,255,255,0.3); color: rgba(255,255,255,0.8);
+      padding: 9px 18px; border-radius: var(--radius);
+      font-size: 0.875rem; font-weight: 500;
+      transition: all var(--transition);
+    }
+    .btn-outline-sm:hover { border-color: var(--white); color: var(--white); }
+
+    /* HERO */
+    .hero {
+      min-height: 80vh;
+      background: linear-gradient(140deg, #0c1628 0%, var(--navy) 50%, #1a3a50 100%);
+      display: flex; align-items: center;
+      padding: 120px 24px 80px;
+      position: relative; overflow: hidden;
+    }
+    .hero-content { max-width: var(--max-w); margin: 0 auto; position: relative; z-index: 1; max-width: 680px; }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(42,122,111,0.25); border: 1px solid rgba(42,122,111,0.4);
+      color: var(--teal-light); font-size: 0.78rem; font-weight: 600;
+      padding: 6px 14px; border-radius: 20px; margin-bottom: 24px;
+      letter-spacing: 0.06em; text-transform: uppercase;
+    }
+    .hero h1 { color: var(--white); margin-bottom: 20px; }
+    .hero h1 em { color: var(--teal-light); font-style: normal; }
+    .hero-sub { font-size: 1.1rem; color: rgba(255,255,255,0.65); max-width: 500px; margin-bottom: 40px; line-height: 1.7; }
+    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; margin-bottom: 48px; }
+    .hero-trust {
+      display: flex; gap: 24px; flex-wrap: wrap;
+      padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .trust-item { display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.6); font-size: 0.85rem; }
+    .trust-item strong { color: var(--white); }
+
+    /* WHY CORPORATE */
+    .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; margin-top: 48px; }
+    .why-card {
+      padding: 32px 28px; border-radius: 12px;
+      border: 1px solid var(--warm-gray); background: var(--white);
+      transition: box-shadow var(--transition), transform var(--transition);
+    }
+    .why-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.08); transform: translateY(-2px); }
+    .why-icon { font-size: 1.8rem; margin-bottom: 16px; }
+    .why-card h3 { color: var(--navy); margin-bottom: 10px; }
+    .why-card p { font-size: 0.875rem; }
+
+    /* WHAT'S INCLUDED */
+    .includes-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; margin-top: 48px; }
+    .include-item {
+      display: flex; align-items: center; gap: 12px;
+      padding: 16px; border-radius: var(--radius);
+      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08);
+      font-size: 0.875rem; color: rgba(255,255,255,0.85);
+    }
+    .include-item .icon { font-size: 1.2rem; flex-shrink: 0; }
+
+    /* ROOMS FOR CORPORATE */
+    .rooms-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 48px; }
+    .room-card { border-radius: 12px; border: 1px solid var(--warm-gray); overflow: hidden; transition: box-shadow var(--transition); }
+    .room-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.1); }
+    .room-img { height: 200px; background: var(--warm-gray); overflow: hidden; position: relative; }
+    .room-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+    .room-card:hover .room-img img { transform: scale(1.03); }
+    .room-badge { position: absolute; top: 12px; left: 12px; background: var(--navy); color: var(--white); font-size: 0.7rem; font-weight: 700; padding: 4px 10px; border-radius: 4px; letter-spacing: 0.04em; text-transform: uppercase; opacity: 1; }
+    .room-body { padding: 24px; }
+    .room-body h3 { color: var(--navy); margin-bottom: 8px; }
+    .room-body p { font-size: 0.875rem; margin-bottom: 16px; }
+    .room-price { font-size: 1.25rem; font-weight: 700; color: var(--navy); }
+    .room-price span { font-size: 0.78rem; font-weight: 400; color: var(--text-muted); }
+
+    /* CONTACT FORM */
+    .contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; margin-top: 56px; align-items: start; }
+    .contact-intro h2 { margin-bottom: 16px; }
+    .contact-intro p { margin-bottom: 24px; font-size: 0.95rem; }
+    .contact-direct { display: flex; flex-direction: column; gap: 12px; margin-top: 32px; }
+    .contact-link {
+      display: flex; align-items: center; gap: 14px;
+      padding: 16px 20px; border-radius: var(--radius);
+      background: var(--off-white); border: 1px solid var(--warm-gray);
+      transition: border-color var(--transition);
+    }
+    .contact-link:hover { border-color: var(--teal); }
+    .contact-link-icon { font-size: 1.1rem; }
+    .contact-link-text strong { display: block; font-size: 0.75rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 2px; }
+    .contact-link-text span { color: var(--navy); font-weight: 500; font-size: 0.9rem; }
+
+    /* Form */
+    form { display: flex; flex-direction: column; gap: 16px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-field { display: flex; flex-direction: column; gap: 6px; }
+    label { font-size: 0.8rem; font-weight: 600; color: var(--navy); }
+    input, textarea, select {
+      padding: 12px 14px; border: 1.5px solid var(--warm-gray);
+      border-radius: var(--radius); font-family: var(--font); font-size: 0.9rem;
+      color: var(--text); background: var(--white);
+      transition: border-color var(--transition);
+    }
+    input:focus, textarea:focus, select:focus {
+      outline: none; border-color: var(--teal);
+      box-shadow: 0 0 0 3px rgba(42,122,111,0.12);
+    }
+    textarea { resize: vertical; min-height: 100px; }
+    .form-submit { margin-top: 4px; }
+    .btn-submit {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--teal); color: var(--white);
+      padding: 14px 28px; border-radius: var(--radius);
+      font-weight: 700; font-size: 0.95rem; border: none; cursor: pointer;
+      transition: background var(--transition), transform var(--transition);
+    }
+    .btn-submit:hover { background: var(--teal-light); transform: translateY(-1px); }
+    .form-note { font-size: 0.8rem; color: var(--text-muted); margin-top: 8px; }
+    #form-success { display: none; padding: 16px 20px; background: rgba(42,122,111,0.1); border: 1px solid var(--teal); border-radius: var(--radius); color: var(--teal); font-weight: 500; }
+    #form-error { display: none; padding: 16px 20px; background: rgba(229,62,62,0.08); border: 1px solid #e53e3e; border-radius: var(--radius); color: #b03030; font-weight: 500; margin-bottom: 16px; }
+
+    /* FOOTER */
+    footer { background: var(--navy); color: rgba(255,255,255,0.5); padding: 40px 24px; font-size: 0.85rem; }
+    .footer-inner { max-width: var(--max-w); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    .footer-logo { color: var(--white); font-weight: 700; font-size: 1rem; }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      .section { padding: 60px 0; }
+      .contact-layout { grid-template-columns: 1fr; gap: 40px; }
+      .form-row { grid-template-columns: 1fr; }
+      .nav-right .btn-outline-sm { display: none; }
+    }
+    @media (max-width: 480px) {
+      .rooms-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Snooze<span>more</span></a>
+      <div class="nav-right">
+        <a href="index.html" class="nav-back" data-en="← Back to hostel" data-sv="← Till vandrarhemmet">← Back to hostel</a>
+        <div class="lang-toggle">
+          <button class="lang-btn active" id="lang-en" onclick="setLang('en')">EN</button>
+          <button class="lang-btn" id="lang-sv" onclick="setLang('sv')">SV</button>
+        </div>
+        <a href="#contact-form" class="btn-primary" data-en="Contact us →" data-sv="Kontakta oss →">Contact us →</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-eyebrow" data-en="🏢 Corporate &amp; Project Accommodation" data-sv="🏢 Boende för företag &amp; projekt">🏢 Corporate &amp; Project Accommodation</div>
+      <h1 data-en="Sleep well.<br><em>Work better.</em>" data-sv="Sov gott.<br><em>Jobba bättre.</em>">Sleep well.<br><em>Work better.</em></h1>
+      <p class="hero-sub" data-en="Practical, clean and quiet accommodation for project workers, consultants and corporate teams staying in Gothenburg. We handle the logistics so your team can focus on the work." data-sv="Praktiskt, rent och lugnt boende för projektarbetare, konsulter och företagsteam i Göteborg. Vi sköter logistiken så att ditt team kan fokusera på jobbet.">Practical, clean and quiet accommodation for project workers, consultants and corporate teams staying in Gothenburg. We handle the logistics so your team can focus on the work.</p>
+      <div class="hero-actions">
+        <a href="#contact-form" class="btn-primary" data-en="Get in touch →" data-sv="Hör av dig →">Get in touch →</a>
+        <a href="https://snoozemore.nitesoft.se/" target="_blank" rel="noopener" class="btn-outline-sm" style="color: rgba(255,255,255,0.8); border-color: rgba(255,255,255,0.3);" data-en="Book directly" data-sv="Boka direkt">Book directly</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item" data-en="<strong>9.2/10</strong> on Hotels.com" data-sv="<strong>9,2/10</strong> på Hotels.com"><strong>9.2/10</strong> on Hotels.com</div>
+        <div class="trust-item" data-en="<strong>8.8/10</strong> on Hostelworld" data-sv="<strong>8,8/10</strong> på Hostelworld"><strong>8.8/10</strong> on Hostelworld</div>
+        <div class="trust-item" data-en="<strong>8.5/10</strong> on Booking.com" data-sv="<strong>8,5/10</strong> på Booking.com"><strong>8.5/10</strong> on Booking.com</div>
+        <div class="trust-item" data-en="<strong>4.1/5</strong> on Google Travel" data-sv="<strong>4,1/5</strong> på Google Travel"><strong>4.1/5</strong> on Google Travel</div>
+        <div class="trust-item" data-en="<strong>Invoicing</strong> available" data-sv="<strong>Faktura</strong> finns"><strong>Invoicing</strong> available</div>
+        <div class="trust-item" data-en="<strong>Group rates</strong> on request" data-sv="<strong>Grupppriser</strong> på förfrågan"><strong>Group rates</strong> on request</div>
+        <div class="trust-item" data-en="<strong>Self check-in</strong>, no reception needed" data-sv="<strong>Självincheckning</strong>, ingen reception behövs"><strong>Self check-in</strong>, no reception needed</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CORPORATE -->
+  <section class="section section--alt">
+    <div class="container">
+      <p class="section-label" data-en="Why teams choose Snoozemore" data-sv="Därför väljer team Snoozemore">Why teams choose Snoozemore</p>
+      <h2 data-en="The practical choice for project stays." data-sv="Det praktiska valet för projektboende.">The practical choice for project stays.</h2>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">🌙</div>
+          <h3 data-en="Quiet by design" data-sv="Lugnt, helt enkelt">Quiet by design</h3>
+          <p data-en="No parties, no noise. Your team gets real rest after a long day on site. That means better performance, and fewer complaints." data-sv="Inga fester, inget oväsen. Ditt team får riktig vila efter en lång dag på jobbet. Det betyder bättre prestation, och färre klagomål.">No parties, no noise. Your team gets real rest after a long day on site. That means better performance, and fewer complaints.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">✨</div>
+          <h3 data-en="Consistently clean" data-sv="Alltid rent">Consistently clean</h3>
+          <p data-en="Toilets, showers, kitchen and common areas are cleaned every day, and every guest gets clean linens and towels. What you see in photos is what you get." data-sv="Toaletter, duschar, kök och allmänna ytor städas varje dag, och varje gäst får rena sängkläder och handdukar. Det du ser på bilderna är det du får.">Toilets, showers, kitchen and common areas are cleaned every day, and every guest gets clean linens and towels. What you see in photos is what you get.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🔑</div>
+          <h3 data-en="Effortless check-in" data-sv="Enkel incheckning">Effortless check-in</h3>
+          <p data-en="Self check-in with a personal door code. No waiting at a reception desk, your team arrives when it suits them." data-sv="Självincheckning med personlig dörrkod. Ingen väntan i en reception, ditt team kommer när det passar dem.">Self check-in with a personal door code. No waiting at a reception desk, your team arrives when it suits them.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">💼</div>
+          <h3 data-en="Invoice-friendly" data-sv="Enkelt att fakturera">Invoice-friendly</h3>
+          <p data-en="We issue invoices for corporate bookings. Easy to handle on an expense report, with clear billing and booking confirmations." data-sv="Vi fakturerar företagsbokningar. Enkelt att hantera i reseräkningen, med tydliga fakturor och bokningsbekräftelser.">We issue invoices for corporate bookings. Easy to handle on an expense report, with clear billing and booking confirmations.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">📍</div>
+          <h3 data-en="Well-located" data-sv="Bra läge">Well-located</h3>
+          <p data-en="Kvilletorget in Gothenburg, close to Backaplan, well connected by public transport and easy to reach from the E6." data-sv="Kvilletorget i Göteborg, nära Backaplan, med bra kollektivtrafik och nära till E6:an.">Kvilletorget in Gothenburg, close to Backaplan, well connected by public transport and easy to reach from the E6.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">💳</div>
+          <h3 data-en="Honest pricing" data-sv="Ärliga priser">Honest pricing</h3>
+          <p data-en="Competitive rates with no hidden fees. Towels, linens and WiFi always included. Group discounts available for longer stays." data-sv="Konkurrenskraftiga priser utan dolda avgifter. Handdukar, sängkläder och WiFi ingår alltid. Grupprabatt vid längre vistelser.">Competitive rates with no hidden fees. Towels, linens and WiFi always included. Group discounts available for longer stays.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT'S INCLUDED -->
+  <section class="section section--dark">
+    <div class="container">
+      <p class="section-label" style="color: var(--teal-light);" data-en="Included in every stay" data-sv="Ingår i varje vistelse">Included in every stay</p>
+      <h2 style="color: var(--white);" data-en="No extras. Just everything you need." data-sv="Inga tillägg. Bara allt du behöver.">No extras. Just everything you need.</h2>
+      <div class="includes-grid">
+        <div class="include-item" data-en="<span class=&quot;icon&quot;>📶</span> Free WiFi throughout" data-sv="<span class=&quot;icon&quot;>📶</span> Fritt WiFi i hela huset"><span class="icon">📶</span> Free WiFi throughout</div>
+        <div class="include-item" data-en="<span class=&quot;icon&quot;>🛁</span> Towels included" data-sv="<span class=&quot;icon&quot;>🛁</span> Handdukar ingår"><span class="icon">🛁</span> Towels included</div>
+        <div class="include-item" data-en="<span class=&quot;icon&quot;>🛏</span> Clean bed linens" data-sv="<span class=&quot;icon&quot;>🛏</span> Rena sängkläder"><span class="icon">🛏</span> Clean bed linens</div>
+        <div class="include-item" data-en="<span class=&quot;icon&quot;>🔒</span> Lockers in the dorms" data-sv="<span class=&quot;icon&quot;>🔒</span> Låsbara skåp i sovsalarna"><span class="icon">🔒</span> Lockers in the dorms</div>
+        <div class="include-item" data-en="<span class=&quot;icon&quot;>💨</span> Hairdryer available" data-sv="<span class=&quot;icon&quot;>💨</span> Hårtork finns"><span class="icon">💨</span> Hairdryer available</div>
+        <div class="include-item" data-en="<span class=&quot;icon&quot;>🔑</span> Self check-in code" data-sv="<span class=&quot;icon&quot;>🔑</span> Kod för självincheckning"><span class="icon">🔑</span> Self check-in code</div>
+        <div class="include-item" data-en="<span class=&quot;icon&quot;>🌅</span> Luggage storage" data-sv="<span class=&quot;icon&quot;>🌅</span> Bagageförvaring"><span class="icon">🌅</span> Luggage storage</div>
+        <div class="include-item" data-en="<span class=&quot;icon&quot;>🚿</span> Shared areas cleaned daily" data-sv="<span class=&quot;icon&quot;>🚿</span> Gemensamma ytor städas dagligen"><span class="icon">🚿</span> Shared areas cleaned daily</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROOMS -->
+  <section class="section">
+    <div class="container">
+      <p class="section-label" data-en="Accommodation options" data-sv="Boendealternativ">Accommodation options</p>
+      <h2 data-en="Rooms for every team size." data-sv="Rum för alla teamstorlekar.">Rooms for every team size.</h2>
+      <div class="rooms-grid">
+
+        <div class="room-card">
+          <div class="room-img">
+            <img src="images/room-single.jpg" alt="Single private room at Snoozemore, corporate accommodation Gothenburg">
+            <span class="room-badge" data-en="Private" data-sv="Privat">Private</span>
+          </div>
+          <div class="room-body">
+            <h3 data-en="Single Room" data-sv="Enkelrum">Single Room</h3>
+            <p data-en="A private room for one person. Ideal for the solo consultant or team lead who needs their own space." data-sv="Ett privat rum för en person. Perfekt för konsulten eller teamledaren som behöver ett eget utrymme.">A private room for one person. Ideal for the solo consultant or team lead who needs their own space.</p>
+          </div>
+        </div>
+
+        <div class="room-card">
+          <div class="room-img">
+            <img src="images/room-double.jpg" alt="Double private room at Snoozemore, corporate accommodation Gothenburg">
+            <span class="room-badge" data-en="Private" data-sv="Privat">Private</span>
+          </div>
+          <div class="room-body">
+            <h3 data-en="Double Room" data-sv="Dubbelrum">Double Room</h3>
+            <p data-en="A private room for two. Comfortable for colleagues sharing a room on longer project stays." data-sv="Ett privat rum för två. Bekvämt för kollegor som delar rum under längre projekt.">A private room for two. Comfortable for colleagues sharing a room on longer project stays.</p>
+          </div>
+        </div>
+
+        <div class="room-card">
+          <div class="room-img">
+            <img src="images/room-ensuited.JPG" alt="Private ensuite room at Snoozemore, corporate accommodation Gothenburg">
+            <span class="room-badge" data-en="Ensuite" data-sv="Eget badrum">Ensuite</span>
+          </div>
+          <div class="room-body">
+            <h3 data-en="Private Ensuite Room" data-sv="Privat rum med eget badrum">Private Ensuite Room</h3>
+            <p data-en="Private room with its own bathroom. Available in 4 or 6-person configurations for larger groups." data-sv="Privat rum med eget badrum. Finns för 4 eller 6 personer, för större grupper.">Private room with its own bathroom. Available in 4 or 6-person configurations for larger groups.</p>
+          </div>
+        </div>
+
+      </div>
+      <p style="margin-top: 28px; font-size: 0.875rem;" data-en="Need to accommodate a larger team? <a href=&quot;#contact-form&quot; style=&quot;color: var(--teal); font-weight: 600;&quot;>Contact us for group rates →</a>" data-sv="Behöver du boende för ett större team? <a href=&quot;#contact-form&quot; style=&quot;color: var(--teal); font-weight: 600;&quot;>Kontakta oss för grupppriser →</a>">Need to accommodate a larger team? <a href="#contact-form" style="color: var(--teal); font-weight: 600;">Contact us for group rates →</a></p>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section class="section section--alt" id="contact-form">
+    <div class="container">
+      <div class="contact-layout">
+        <div class="contact-intro">
+          <p class="section-label" data-en="Get in touch" data-sv="Kontakt">Get in touch</p>
+          <h2 data-en="Let's sort your team's accommodation." data-sv="Vi löser boendet för ditt team.">Let's sort your team's accommodation.</h2>
+          <p data-en="Tell us about your project and we'll get back to you with availability and pricing. Group discounts and long-stay rates available." data-sv="Berätta om ert projekt så återkommer vi med tillgänglighet och pris. Grupprabatter och priser för långa vistelser finns.">Tell us about your project and we'll get back to you with availability and pricing. Group discounts and long-stay rates available.</p>
+          <div class="contact-direct">
+            <a href="tel:+46317990910" class="contact-link">
+              <span class="contact-link-icon">📞</span>
+              <div class="contact-link-text">
+                <strong data-en="Phone" data-sv="Telefon">Phone</strong>
+                <span>031-799 09 10</span>
+              </div>
+            </a>
+            <a href="https://wa.me/46733786882" class="contact-link" target="_blank" rel="noopener">
+              <span class="contact-link-icon">💬</span>
+              <div class="contact-link-text">
+                <strong>WhatsApp</strong>
+                <span>+46 73-378 68 82</span>
+              </div>
+            </a>
+            <a href="mailto:info@snoozemore.se" class="contact-link">
+              <span class="contact-link-icon">✉️</span>
+              <div class="contact-link-text">
+                <strong data-en="Email" data-sv="E-post">Email</strong>
+                <span>info@snoozemore.se</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div id="form-success" data-en="✓ Thank you, we'll be in touch within one business day." data-sv="✓ Tack, vi hör av oss inom en arbetsdag.">✓ Thank you, we'll be in touch within one business day.</div>
+          <div id="form-error" data-en="Something went wrong and the enquiry was not sent. Please email info@snoozemore.se or call 031-799 09 10." data-sv="Något gick fel och förfrågan skickades inte. Mejla info@snoozemore.se eller ring 031-799 09 10.">Something went wrong and the enquiry was not sent. Please email info@snoozemore.se or call 031-799 09 10.</div>
+          <form id="corporate-form" onsubmit="handleSubmit(event)" novalidate>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="name" data-en="Your name *" data-sv="Ditt namn *">Your name *</label>
+                <input type="text" id="name" name="name" required placeholder="Anna Lindqvist">
+              </div>
+              <div class="form-field">
+                <label for="company" data-en="Company *" data-sv="Företag *">Company *</label>
+                <input type="text" id="company" name="company" required placeholder="Skanska AB">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="email" data-en="Email *" data-sv="E-post *">Email *</label>
+                <input type="email" id="email" name="email" required placeholder="anna@company.se">
+              </div>
+              <div class="form-field">
+                <label for="phone" data-en="Phone" data-sv="Telefon">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="+46 70 123 45 67">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="guests" data-en="Number of guests *" data-sv="Antal gäster *">Number of guests *</label>
+                <select id="guests" name="guests" required>
+                  <option value="" data-en="Select..." data-sv="Välj...">Select...</option>
+                  <option value="1" data-en="1 person" data-sv="1 person">1 person</option>
+                  <option value="2-3" data-en="2–3 people" data-sv="2–3 personer">2–3 people</option>
+                  <option value="4-6" data-en="4–6 people" data-sv="4–6 personer">4–6 people</option>
+                  <option value="7-10" data-en="7–10 people" data-sv="7–10 personer">7–10 people</option>
+                  <option value="10+" data-en="More than 10" data-sv="Fler än 10">More than 10</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="duration" data-en="Approximate length of stay *" data-sv="Ungefärlig vistelselängd *">Approximate length of stay *</label>
+                <select id="duration" name="duration" required>
+                  <option value="" data-en="Select..." data-sv="Välj...">Select...</option>
+                  <option value="1-3" data-en="1–3 nights" data-sv="1–3 nätter">1–3 nights</option>
+                  <option value="1week" data-en="About 1 week" data-sv="Cirka 1 vecka">About 1 week</option>
+                  <option value="2-4weeks" data-en="2–4 weeks" data-sv="2–4 veckor">2–4 weeks</option>
+                  <option value="1month+" data-en="1 month or more" data-sv="1 månad eller mer">1 month or more</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="message" data-en="Tell us about your project or needs" data-sv="Berätta om ert projekt eller era behov">Tell us about your project or needs</label>
+              <textarea id="message" name="message" placeholder="e.g. We need accommodation for 4 consultants working on a construction project near Backaplan, starting in August..." data-ph-en="e.g. We need accommodation for 4 consultants working on a construction project near Backaplan, starting in August..." data-ph-sv="T.ex. Vi behöver boende för 4 konsulter som jobbar på ett byggprojekt vid Backaplan, med start i augusti..."></textarea>
+            </div>
+            <div class="form-field" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;">
+              <label for="website">Website</label>
+              <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+            </div>
+            <div class="form-submit">
+              <button type="submit" class="btn-submit" data-en="Send enquiry →" data-sv="Skicka förfrågan →">Send enquiry →</button>
+              <p class="form-note" data-en="We typically respond within one business day." data-sv="Vi svarar oftast inom en arbetsdag.">We typically respond within one business day.</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <a href="index.html" class="footer-logo">← Snoozemore</a>
+      <span>info@snoozemore.se · Kvilletorget 24, Göteborg · 031-799 09 10</span>
+      <a href="integritetspolicy.html" data-en="Privacy policy" data-sv="Integritetspolicy" style="color:rgba(255,255,255,0.8);">Integritetspolicy</a>
+      <span>© 2026 Pottebo AB</span>
+    </div>
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-en]').forEach(el => {
+        const text = el.getAttribute('data-' + lang);
+        if (text) el.innerHTML = text;
+      });
+      document.querySelectorAll('[data-ph-en]').forEach(el => {
+        el.placeholder = el.getAttribute('data-ph-' + lang) || el.placeholder;
+      });
+      document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+      document.getElementById('lang-sv').classList.toggle('active', lang === 'sv');
+      try { localStorage.setItem('lang', lang); } catch (e) {}
+    }
+    (function() {
+      let saved = null; try { saved = localStorage.getItem('lang'); } catch (e) {}
+      const browser = navigator.language || '';
+      const preferred = saved || (browser.startsWith('sv') ? 'sv' : 'en');
+      if (preferred === 'sv') setLang('sv');
+    })();
+  </script>
+
+  <script>
+    const ENQUIRY_URL = 'https://chat.snoozemore.se/api/enquiry';
+
+    async function handleSubmit(e) {
+      e.preventDefault();
+      const form    = document.getElementById('corporate-form');
+      const success = document.getElementById('form-success');
+      const error   = document.getElementById('form-error');
+      const button  = form.querySelector('button[type="submit"]');
+      const lang    = document.documentElement.lang === 'sv' ? 'sv' : 'en';
+
+      error.style.display = 'none';
+
+      const required = form.querySelectorAll('[required]');
+      let valid = true;
+      required.forEach(field => {
+        if (!field.value.trim()) { field.style.borderColor = '#e53e3e'; valid = false; }
+        else { field.style.borderColor = ''; }
+      });
+      if (!valid) return;
+
+      const val = id => (document.getElementById(id).value || '').trim();
+      const payload = {
+        name:     val('name'),
+        company:  val('company'),
+        email:    val('email'),
+        phone:    val('phone'),
+        guests:   val('guests'),
+        duration: val('duration'),
+        message:  val('message'),
+        source:   'corporate.html',
+        website:  val('website')
+      };
+
+      const label = button.innerHTML;
+      button.disabled = true;
+      button.innerHTML = lang === 'sv' ? 'Skickar…' : 'Sending…';
+
+      try {
+        const res = await fetch(ENQUIRY_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const data = await res.json().catch(() => ({}));
+        if (!res.ok || data.ok !== true) throw new Error(data.error || res.status);
+        form.style.display = 'none';
+        success.style.display = 'block';
+        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } catch (err) {
+        button.disabled = false;
+        button.innerHTML = label;
+        error.style.display = 'block';
+        error.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+  </script>
+
+  <script src="https://chat.snoozemore.se/widget.js" defer></script>
+</body>
+</html>

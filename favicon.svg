@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Snoozemore">
+  <rect width="64" height="64" rx="14" fill="#1d2d3a"/>
+  <path d="M41.5 13.5a17 17 0 1 0 9 22.2 14 14 0 0 1-9-22.2z" fill="#5fa899"/>
+  <g fill="#ffffff" font-family="Outfit, system-ui, sans-serif" font-weight="700">
+    <text x="15" y="30" font-size="15">z</text>
+    <text x="22" y="43" font-size="19">z</text>
+  </g>
+</svg>
